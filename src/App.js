@@ -1,28 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import fetchdata from './redux/fetchdata';
 
 function App() {
+  // const fetchdata = async () => {
+  //   const fetchedData = fetch('http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={204f2b7c05819c97b2217c0e4b396d57}');
+  //   const data = await fetchedData;
+  //   console.log(data);
+  // };
+  fetchdata();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h1>Hello</h1>
   );
 }
 
