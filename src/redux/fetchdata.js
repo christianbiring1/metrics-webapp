@@ -16,8 +16,8 @@ const fetchdata = async () => {
       });
     }
   });
-  const mydata = usefuldata.slice(0, 200);
-  console.log(mydata[20], mydata[21]);
+  const mydata = usefuldata.slice(0, 300);
+  return mydata;
 };
 
 export default fetchdata;

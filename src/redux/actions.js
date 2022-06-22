@@ -1,18 +1,18 @@
 const GET_DATA = 'redux/actions/GET_DATA';
 
-const getDataAction = (mydata) => ({
+export const getDataAction = (countries) => ({
   type: GET_DATA,
-  mydata,
+  countries,
 });
 getDataAction();
 
-const reducer = (state = [], action) => {
+const dataReducer = (state = [], action) => {
   switch (action.type) {
     case GET_DATA:
-      return action.mydata;
+      return action.countries;
     default:
       return state;
   }
 };
 
-reducer();
+export default dataReducer;
