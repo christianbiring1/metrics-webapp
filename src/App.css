@@ -42,9 +42,16 @@ body {
   font-weight: 300;
 }
 
+.img-right {
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .map {
-  width: 100%;
+  width: 90%;
   filter: brightness(30%) grayscale(60%) opacity(0.5);
+  padding-top: 20px;
 }
 
 .img {
@@ -60,15 +67,14 @@ body {
   display: grid;
   padding-top: 24px;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
 }
 
 .country-container {
-  padding: 15px;
+  padding: 35px;
 }
 
 .country-container:hover {
-  opacity: 0.5;
+  opacity: 0.7;
   cursor: pointer;
 }
 

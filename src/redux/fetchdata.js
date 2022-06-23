@@ -16,7 +16,7 @@ const fetchdata = async () => {
       });
     }
   });
-  const mydata = usefuldata.slice(0, 300);
+  const mydata = usefuldata.slice(0, 600);
   return mydata;
 };
 

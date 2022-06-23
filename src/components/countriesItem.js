@@ -33,13 +33,13 @@ function CountryItem() {
           <h2 className="year">2022</h2>
         </div>
         <h3 className="most-views">Most views</h3>
-        <div>
+        <div className="img-right">
           <img src={mic} alt="" className="img" />
           <img src={setting} alt="" className="img" />
         </div>
       </header>
       <div>
-        <img src={map} alt="" className="map" />
+        <img src={map} alt="map" className="map" />
       </div>
       <div className="countries-container">
         {countryname.map((country) => (

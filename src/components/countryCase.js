@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import corona from '../assets/corona.png';
 
 function CountryCase({
