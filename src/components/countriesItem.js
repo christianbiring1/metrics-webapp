@@ -14,20 +14,18 @@ function CountryItem() {
     }
     data();
   }, []);
-  // console.log(countries);
-  countries.forEach((country) => {
-    console.log(country);
-  });
+  let countryname = [];
+  countries.map((country) => (
+    countryname.push(country.Country_Region)
+  ));
+  countryname = [...new Set(countryname)];
+
   return (
     <div className="countries-container">
-      {countries.map((country) => (
+      {countryname.map((country) => (
         <CountryCase
-          key={country.id}
-          name={country.Country_Region}
-          confirmedCases={country.Confirmed}
-          lastUpdate={country.Last_Update}
-          incidentRate={country.Incident_Rate}
-          provinceState={country.Province_State}
+          key={Math.random()}
+          name={country}
         />
       ))}
       hello React
