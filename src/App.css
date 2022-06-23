@@ -1,39 +1,78 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: #eb4c89;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.country-name {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.06);
+  align-items: center;
+  height: 34px;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.left-header {
+  display: flex;
+}
+
+.year {
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.arrow {
+  width: 20px;
+  height: 25px;
+}
+
+.most-views {
+  font-weight: 300;
+}
+
+.map {
+  width: 100%;
+  filter: brightness(30%) grayscale(60%) opacity(0.5);
+}
+
+.img {
+  width: 30px;
+}
+
+.corona {
+  width: 30%;
+  filter: brightness(50%) grayscale(50%) opacity(0.5);
+}
+
+.countries-container {
+  display: grid;
+  padding-top: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.country-container {
+  padding: 15px;
+}
+
+.country-container:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.country-container:nth-child(4n + 2),
+.country-container:nth-child(4n + 3) {
+  background-color: rgba(0, 0, 0, 0.08);
 }

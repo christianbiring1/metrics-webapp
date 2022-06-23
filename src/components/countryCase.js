@@ -1,23 +1,21 @@
 import PropTypes from 'prop-types';
+import corona from '../assets/corona.png';
 
 function CountryCase({
-  name, /*  confirmedCases, provinceState, lastUpdate, incidentRate,  */
+  name,
 }) {
   return (
-    <>
+    <div className="country-container">
       <div className="country-item">
-        <h1>{name}</h1>
+        <img src={corona} alt="" className="corona" />
+        <h1 className="country-name">{name}</h1>
       </div>
-    </>
+    </div>
   );
 }
 
 CountryCase.propTypes = {
   name: PropTypes.string.isRequired,
-  // confirmedCases: PropTypes.string.isRequired,
-  // provinceState: PropTypes.string.isRequired,
-  // lastUpdate: PropTypes.string.isRequired,
-  // incidentRate: PropTypes.string.isRequired,
 };
 
 export default CountryCase;
