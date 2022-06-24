@@ -1,14 +1,16 @@
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CountryItem from './components/countriesItem';
-import fetchdata from './redux/fetchdata';
+import Details from './components/Details';
 
 function App() {
-  fetchdata();
-
   return (
-    <>
-      <CountryItem />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<CountryItem />} />
+        <Route path="/details/:pays" element={<Details />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

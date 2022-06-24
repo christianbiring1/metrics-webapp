@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { getDataAction } from '../redux/actions';
-import fetchdata from '../redux/fetchdata';
+// import { getDataAction } from '../redux/actions';
+import { fetchdata } from '../redux/actions';
 import CountryCase from './countryCase';
 import mic from '../assets/mic.png';
 import setting from '../assets/settings.png';
@@ -9,21 +10,19 @@ import arrow from '../assets/left-arrow.png';
 import map from '../assets/world.svg';
 
 function CountryItem() {
+  const navigation = useNavigate();
+  const handleNavigation = (country) => (
+    navigation(`/details/${country}`)
+  );
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries);
-  useEffect(() => {
-    async function data() {
-      const countries = await fetchdata();
-      dispatch(getDataAction(countries));
-    }
-    data();
-  }, []);
+  useEffect(() => { dispatch(fetchdata()); }, []);
   let countryname = [];
   countries.map((country) => (
     countryname.push(country.Country_Region)
   ));
   countryname = [...new Set(countryname)];
-  countries.map((country) => (console.log(country)));
+  // countries.map((country) => (console.log(country)));
 
   return (
     <section>
@@ -46,6 +45,8 @@ function CountryItem() {
           <CountryCase
             key={Math.random()}
             name={country}
+            countries={countries}
+            handleNavigation={handleNavigation}
           />
         ))}
       </div>
