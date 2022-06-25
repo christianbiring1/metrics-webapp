@@ -169,7 +169,7 @@ li {
 }
 
 .detail-img {
-  width: 50%;
+  width: 30%;
   filter: brightness(40%) grayscale(50%) opacity(0.6);
 }
 
