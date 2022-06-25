@@ -10,7 +10,7 @@ This project is about building a mobile web application to check a list of metri
 - CSS
 - React/Redux
 
-## Live Demo (if available)
+## Live Demo
 
 You can check the live demo of my project [here](https://chris-metrics-webapp.herokuapp.com/)
 
