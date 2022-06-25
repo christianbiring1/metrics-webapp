@@ -18,9 +18,12 @@ function CountryItem() {
   const countries = useSelector((state) => state.countries);
   useEffect(() => { dispatch(fetchdata()); }, []);
   let countryname = [];
-  countries.map((country) => (
-    countryname.push(country.Country_Region)
-  ));
+  let total = 0;
+  countries.map((country) => {
+    countryname.push(country.Country_Region);
+    total += country.Confirmed;
+    return (countryname, total);
+  });
   countryname = [...new Set(countryname)];
   // countries.map((country) => (console.log(country)));
 
@@ -37,9 +40,14 @@ function CountryItem() {
           <img src={setting} alt="" className="img" />
         </div>
       </header>
-      <div>
+      <div className="home-top">
         <img src={map} alt="map" className="map" />
+        <h2>
+          WORLDWIDE
+          {total}
+        </h2>
       </div>
+      <p className="statbycountry"><span>STATS BY COUNTRY</span></p>
       <div className="countries-container">
         {countryname.map((country) => (
           <CountryCase

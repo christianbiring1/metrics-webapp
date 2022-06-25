@@ -27,7 +27,7 @@ function Details() {
             element = (<span>You can Check the data on the home page</span>);
           } else if (item.Country_Region === pays && item.Province_State !== '') {
             element = (
-              <li>
+              <li key={item.Confirmed}>
                 <span>{item.Province_State}</span>
                 <span>{item.Confirmed}</span>
               </li>
