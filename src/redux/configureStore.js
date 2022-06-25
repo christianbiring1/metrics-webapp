@@ -1,4 +1,3 @@
-// import { combineReducers } from '@reduxjs/toolkit';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
@@ -9,9 +8,4 @@ const rootReducer = combineReducers({
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
-// const store = configureStore({
-//   reducer: {
-//     countries: dataReducer,
-//   },
-// });
 export default store;
