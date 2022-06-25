@@ -43,7 +43,7 @@ function CountryCase({
 }
 
 CountryCase.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   handleNavigation: PropTypes.func.isRequired,
   countries: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number,
@@ -57,6 +57,7 @@ CountryCase.propTypes = {
 
 CountryCase.defaultProps = {
   countries: undefined,
+  name: undefined,
 };
 
 export default CountryCase;
