@@ -35,7 +35,7 @@ body {
 }
 
 .countrycase {
-  font-weight: 550;
+  font-weight: 500;
   font-size: 1rem;
 }
 
@@ -95,12 +95,12 @@ body {
 }
 
 .total span {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .statbycountry span {
   margin-left: 5%;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .img {
@@ -188,4 +188,5 @@ li {
 
 .province-item {
   padding: 8px;
+  font-weight: 500;
 }

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-// import { getDataAction } from '../redux/actions';
 import { fetchdata } from '../redux/actions';
 import CountryCase from './countryCase';
 import mic from '../assets/mic.png';
