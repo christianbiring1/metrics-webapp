@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
+import uuid from 'react-uuid';
 import { fetchdata } from '../redux/actions';
 import corona from '../assets/corona.png';
 import mic from '../assets/mic.png';
@@ -29,7 +30,7 @@ function Details() {
     if (country.Country_Region === pays) {
       view = country.Confirmed;
       element = (
-        <ul className="province-list">
+        <ul className="province-list" key={uuid()}>
           <li className="province-item">
             <span>Case Fatality Ratio</span>
             <span>{country.Case_Fatality_Ratio}</span>
@@ -99,12 +100,12 @@ function Details() {
         {
           data.map((item) => {
             element = (
-              <ul className="province-list">
+              <ul className="province-list" key={uuid()}>
                 <li className="province-item">
                   <span className="province-state">{item.Province_State}</span>
                   <span className="case-number">
                     <span>{item.Confirmed}</span>
-                    <span>Cases</span>
+                    <span>views</span>
                   </span>
                 </li>
               </ul>

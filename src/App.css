@@ -97,7 +97,7 @@ body {
 
 .statbycountry span {
   margin-left: 5%;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .img {
@@ -163,4 +163,8 @@ li {
 .detail-img {
   width: 50%;
   filter: brightness(40%) grayscale(50%) opacity(0.6);
+}
+
+.province-state {
+  font-weight: 600;
 }
