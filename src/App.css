@@ -1,39 +1,192 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;1,500&family=Roboto:wght@300;400&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #eb4c89;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.country-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.country-stat {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  gap: 10px;
+}
+
+.country-name {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.countrycase {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.06);
+  align-items: center;
+  height: 34px;
+}
+
+.left-header {
+  display: flex;
+}
+
+.year {
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.arrow {
+  width: 20px;
+  height: 25px;
+}
+
+.most-views {
+  font-weight: 300;
+}
+
+.img-right {
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-top h2 {
+  margin-left: -20px;
+}
+
+.map {
+  width: 70%;
+  filter: brightness(30%) grayscale(60%) opacity(0.5);
+  padding-top: 20px;
+}
+
+.statbycountry {
+  background-color: rgba(0, 0, 0, 0.08);
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.total span {
+  font-weight: 500;
+}
+
+.statbycountry span {
+  margin-left: 5%;
+  font-weight: 500;
+}
+
+.img {
+  width: 30px;
+}
+
+.corona {
+  width: 30%;
+  filter: brightness(50%) grayscale(50%) opacity(0.5);
+}
+
+.countries-container {
+  display: grid;
+  padding-top: 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  border: 1px solid rgba(250, 250, 250, 0.4);
+}
+
+.country-container {
+  padding: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.country-container:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.country-container:nth-child(4n + 2),
+.country-container:nth-child(4n + 3) {
+  background-color: rgba(0, 0, 0, 0.08);
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.country-container:nth-child(4n - 4),
+.country-container:nth-child(4n + 1) {
+  background-color: #eb4c89;
+}
+
+.province-list,
+.country-list {
+  margin: -10px 0;
+  padding: 20px 10px;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.province-list:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.case-number {
+  display: flex;
+  gap: 5px;
+}
+
+.detail-img {
+  width: 30%;
+  filter: brightness(40%) grayscale(50%) opacity(0.6);
+}
+
+.province-state {
+  font-weight: 600;
+}
+
+.back-home {
+  border: none;
+  background-color: transparent;
+}
+
+.back-home:hover {
+  cursor: pointer;
+}
+
+.province-item {
+  padding: 8px;
+  font-weight: 500;
 }

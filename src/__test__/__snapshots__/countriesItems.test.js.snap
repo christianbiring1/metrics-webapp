@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Countries Item 1`] = `
+<section>
+  <header
+    className="app-header"
+  >
+    <div
+      className="left-header"
+    >
+      <img
+        alt="arrow"
+        className="arrow img"
+        src="left-arrow.png"
+      />
+      <h2
+        className="year"
+      >
+        2022
+      </h2>
+    </div>
+    <h3
+      className="most-views"
+    >
+      most views
+    </h3>
+    <div
+      className="img-right"
+    >
+      <img
+        alt=""
+        className="img"
+        src="mic.png"
+      />
+      <img
+        alt=""
+        className="img"
+        src="settings.png"
+      />
+    </div>
+  </header>
+  <div
+    className="home-top"
+  >
+    <img
+      alt="map"
+      className="map"
+      src="world.svg"
+    />
+    <div
+      className="total"
+    >
+      <h2>
+        WORLDWIDE
+      </h2>
+      <span>
+        0
+         
+        views
+      </span>
+    </div>
+  </div>
+  <p
+    className="statbycountry"
+  >
+    <span>
+      STATS BY COUNTRY
+    </span>
+  </p>
+  <div
+    className="countries-container"
+  />
+</section>
+`;
