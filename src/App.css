@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&family=Roboto:wght@300;400&display=swap');
 *,
 *::after,
 *::before {
@@ -8,12 +9,14 @@
 body {
   background-color: #eb4c89;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .country-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
 .country-stat {
   padding-top: 10px;
@@ -88,6 +91,10 @@ body {
   align-items: center;
 }
 
+.total span {
+  font-weight: 600;
+}
+
 .statbycountry span {
   margin-left: 5%;
   font-weight: 500;
@@ -130,4 +137,30 @@ button {
 .country-container:nth-child(4n - 4),
 .country-container:nth-child(4n + 1) {
   background-color: #eb4c89;
+}
+
+.province-list,
+.country-list {
+  margin: 5px 0;
+  padding: 20px 10px;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.province-list:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.case-number {
+  display: flex;
+  gap: 5px; 
+}
+
+.detail-img {
+  width: 50%;
+  filter: brightness(40%) grayscale(50%) opacity(0.6);
 }

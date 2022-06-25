@@ -25,7 +25,6 @@ function CountryItem() {
     return (countryname, total);
   });
   countryname = [...new Set(countryname)];
-  // countries.map((country) => (console.log(country)));
 
   return (
     <section>
@@ -34,7 +33,7 @@ function CountryItem() {
           <img src={arrow} alt="arrow" className="arrow img" />
           <h2 className="year">2022</h2>
         </div>
-        <h3 className="most-views">Most views</h3>
+        <h3 className="most-views">most views</h3>
         <div className="img-right">
           <img src={mic} alt="" className="img" />
           <img src={setting} alt="" className="img" />
@@ -42,10 +41,14 @@ function CountryItem() {
       </header>
       <div className="home-top">
         <img src={map} alt="map" className="map" />
-        <h2>
-          WORLDWIDE
-          {total}
-        </h2>
+        <div className="total">
+          <h2>WORLDWIDE</h2>
+          <span>
+            {total}
+            {' '}
+            views
+          </span>
+        </div>
       </div>
       <p className="statbycountry"><span>STATS BY COUNTRY</span></p>
       <div className="countries-container">

@@ -31,7 +31,11 @@ function CountryCase({
         <img src={corona} alt="" className="corona" />
         <div className="country-stat">
           <h1 className="country-name">{name}</h1>
-          <span className="countrycase">{total}</span>
+          <span className="countrycase">
+            {total}
+            {' '}
+            views
+          </span>
         </div>
       </div>
     </button>
