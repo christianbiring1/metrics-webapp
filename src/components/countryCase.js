@@ -25,13 +25,14 @@ function CountryCase({
     }
     return total;
   });
-  console.log(filteredByProvince);
   return (
     <button type="button" className="country-container" onClick={() => handleNavigation(name)}>
       <div className="country-item">
         <img src={corona} alt="" className="corona" />
-        <h1 className="country-name">{name}</h1>
-        <span>{total}</span>
+        <div className="country-stat">
+          <h1 className="country-name">{name}</h1>
+          <span className="countrycase">{total}</span>
+        </div>
       </div>
     </button>
   );

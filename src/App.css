@@ -10,10 +10,27 @@ body {
   color: white;
 }
 
+.country-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.country-stat {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  gap: 10px;
+}
 .country-name {
   text-transform: uppercase;
   font-size: 1.5rem;
   text-align: right;
+}
+
+.countrycase {
+  font-weight: 550;
+  font-size: 1rem;
 }
 
 .app-header {
@@ -96,7 +113,7 @@ button {
 }
 
 .country-container {
-  padding: 35px;
+  padding: 10px;
   color: white;
 }
 

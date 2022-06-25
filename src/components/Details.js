@@ -8,7 +8,6 @@ function Details() {
   const dispatch = useDispatch();
   useEffect(() => { dispatch(fetchdata()); }, []);
   const countries = useSelector((state) => state.countries);
-  // .filter((country) => country.Country_Region === pays);
   let countryname = [];
   countries.map((country) => (
     countryname.push(country.Country_Region)
@@ -16,7 +15,6 @@ function Details() {
   countryname = [...new Set(countryname)].filter((country) => (
     country.Country_Region === pays
   ));
-  console.log(countries);
   let element = null;
 
   return (
