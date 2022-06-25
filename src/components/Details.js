@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import uuid from 'react-uuid';
 import { fetchdata } from '../redux/actions';
 import corona from '../assets/corona.png';
@@ -10,6 +10,10 @@ import arrow from '../assets/left-arrow.png';
 
 function Details() {
   const { pays } = useParams();
+  const navigation = useNavigate();
+  const handleUrl = () => {
+    navigation('/');
+  };
   const dispatch = useDispatch();
   useEffect(() => { dispatch(fetchdata()); }, []);
   const countries = useSelector((state) => state.countries);
@@ -32,22 +36,22 @@ function Details() {
       element = (
         <ul className="province-list" key={uuid()}>
           <li className="province-item">
-            <span>Case Fatality Ratio</span>
+            <span className="province-state">Case Fatality Ratio</span>
             <span>{country.Case_Fatality_Ratio}</span>
           </li>
           <li className="province-item">
-            <span>Confirmed cases</span>
+            <span className="province-state">Confirmed cases</span>
             <span className="case-number">
               <span>{country.Confirmed}</span>
               <span>cases</span>
             </span>
           </li>
           <li className="province-item">
-            <span>Incident rate</span>
+            <span className="province-state">Incident rate</span>
             <span>{country.Incident_Rate}</span>
           </li>
           <li className="province-item">
-            <span>Deaths</span>
+            <span className="province-state">Deaths</span>
             <span>{country.Deaths}</span>
           </li>
         </ul>
@@ -72,7 +76,9 @@ function Details() {
     <section>
       <header className="app-header">
         <div className="left-header">
-          <img src={arrow} alt="arrow" className="arrow img" />
+          <button type="button" className="back-home" onClick={() => handleUrl()}>
+            <img src={arrow} alt="arrow" className="arrow img" />
+          </button>
           <h2 className="year">2022</h2>
         </div>
         <h3 className="most-views">town/city views</h3>
