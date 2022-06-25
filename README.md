@@ -12,7 +12,7 @@ This project is about building a mobile web application to check a list of metri
 
 ## Live Demo (if available)
 
-[You can check the live demo of my project here](https://chris-metrics-webapp.herokuapp.com/)
+You can check the live demo of my project [here](https://chris-metrics-webapp.herokuapp.com/)
 
 ### Prerequisites
 
