@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchdata } from '../redux/actions';
@@ -8,8 +8,13 @@ import setting from '../assets/settings.png';
 import map from '../assets/world.svg';
 import CountryCase from './countryCase';
 import Pagination from '../common/pagination';
+import paginate from '../utils/paginate';
 
 function CountryItem() {
+  const [data, setData] = useState({
+    currentPage: 1,
+    pageSize: 22,
+  });
   const navigation = useNavigate();
   const handleNavigation = (country) => (
     navigation(`/details/${country}`)
@@ -32,8 +37,14 @@ function CountryItem() {
   };
 
   const handlePageChange = (page) => {
-    console.log(page);
+    setData((prev) => ({ ...prev, currentPage: page }));
   };
+
+  const { pageSize, currentPage } = data;
+
+  const pagdata = paginate(countryname, currentPage, pageSize);
+  // console.log(pagdata);
+  // console.log(countryname);
 
   return (
     <section>
@@ -70,7 +81,7 @@ function CountryItem() {
         <span>STATS BY COUNTRY</span>
       </p>
       <div className="countries-container">
-        {countryname.map((country) => (
+        {pagdata.map((country) => (
           <CountryCase
             key={Math.random()}
             name={country}
@@ -79,7 +90,12 @@ function CountryItem() {
           />
         ))}
       </div>
-      <Pagination itemsCount={countryname.length} pageSize={4} onPageChange={handlePageChange} />
+      <Pagination
+        itemsCount={countryname.length}
+        pageSize={pageSize}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
     </section>
   );
 }
