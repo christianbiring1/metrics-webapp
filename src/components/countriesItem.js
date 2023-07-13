@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchdata } from '../redux/actions';
-import CountryCase from './countryCase';
 import mic from '../assets/mic.png';
 import setting from '../assets/settings.png';
 // import arrow from '../assets/left-arrow.png';
 import map from '../assets/world.svg';
+import CountryCase from './countryCase';
+import Pagination from '../common/pagination';
 
 function CountryItem() {
   const navigation = useNavigate();
@@ -29,6 +30,11 @@ function CountryItem() {
     filter: 'invert(1)',
     cursor: 'pointer',
   };
+
+  const handlePageChange = (page) => {
+    console.log(page);
+  };
+
   return (
     <section>
       <header className="app-header">
@@ -73,6 +79,7 @@ function CountryItem() {
           />
         ))}
       </div>
+      <Pagination itemsCount={countryname.length} pageSize={4} onPageChange={handlePageChange} />
     </section>
   );
 }
