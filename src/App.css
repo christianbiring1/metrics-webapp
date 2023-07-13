@@ -203,3 +203,12 @@ li {
 span {
   font-size: 1.6rem;
 }
+
+.pagination {
+  float: right;
+  padding: 10px 20px;
+}
+
+.page-item a{
+  font-size: 1.6rem;
+}
