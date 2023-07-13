@@ -30,11 +30,6 @@ function CountryItem() {
     return (countryname, total);
   });
   countryname = [...new Set(countryname)];
-  const styles = {
-    width: '20px',
-    filter: 'invert(1)',
-    cursor: 'pointer',
-  };
 
   const handlePageChange = (page) => {
     setData((prev) => ({ ...prev, currentPage: page }));
@@ -54,8 +49,8 @@ function CountryItem() {
         </div>
         <h3 className="most-views">most views</h3>
         <div className="img-right" style={{ paddingRight: '20px' }}>
-          <img src={mic} alt="" className="img" style={styles} />
-          <img src={setting} alt="" className="img" style={styles} />
+          <img src={mic} alt="" className="img" />
+          <img src={setting} alt="" className="img" />
         </div>
       </header>
       <div className="home-top">
