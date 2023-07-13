@@ -5,6 +5,7 @@
 *::before {
   margin: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
@@ -30,13 +31,13 @@ body {
 
 .country-name {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: right;
 }
 
 .countrycase {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 .app-header {
@@ -101,6 +102,7 @@ body {
 .statbycountry span {
   margin-left: 5%;
   font-weight: 500;
+  font-size: 2rem;
 }
 
 .img {
@@ -108,7 +110,7 @@ body {
 }
 
 .corona {
-  width: 30%;
+  width: 20%;
   filter: brightness(50%) grayscale(50%) opacity(0.5);
 }
 
@@ -157,6 +159,7 @@ li {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  font-size: 2rem;
 }
 
 .province-list:nth-child(2n) {
@@ -166,6 +169,7 @@ li {
 .case-number {
   display: flex;
   gap: 5px;
+  font-size: 1.6rem;
 }
 
 .detail-img {
@@ -175,6 +179,7 @@ li {
 
 .province-state {
   font-weight: 600;
+  font-size: 1.6rem;
 }
 
 .back-home {
@@ -189,4 +194,8 @@ li {
 .province-item {
   padding: 8px;
   font-weight: 500;
+}
+
+span {
+  font-size: 1.6rem;
 }

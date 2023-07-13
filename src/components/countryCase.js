@@ -27,16 +27,27 @@ function CountryCase({
   });
   return (
     <button type="button" className="country-container" onClick={() => handleNavigation(name)}>
+
       <div className="country-item">
-        <img src={corona} alt="" className="corona" />
-        <div className="country-stat">
-          <h1 className="country-name">{name}</h1>
-          <span className="countrycase">
-            {total}
-            {' '}
-            views
-          </span>
-        </div>
+        {!name ? (
+          <div className="text-center">
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        ) : (
+          <>
+            <img src={corona} alt="" className="corona" />
+            <div className="country-stat">
+              <h1 className="country-name">{name}</h1>
+              <span className="countrycase">
+                {total}
+                {' '}
+                views
+              </span>
+            </div>
+          </>
+        )}
       </div>
     </button>
   );

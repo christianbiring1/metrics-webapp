@@ -1,7 +1,8 @@
-import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CountryItem from './components/countriesItem';
 import Details from './components/Details';
+import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 
 function App() {
   return (
