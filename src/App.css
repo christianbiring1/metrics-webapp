@@ -47,6 +47,10 @@ body {
   align-items: center;
   height: 34px;
 }
+.middle_header {
+  display: flex;
+  align-items: center;
+}
 
 .left-header {
   display: flex;

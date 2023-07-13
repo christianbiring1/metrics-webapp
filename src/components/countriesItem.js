@@ -60,7 +60,9 @@ function CountryItem() {
           </div>
         )}
       </div>
-      <p className="statbycountry"><span>STATS BY COUNTRY</span></p>
+      <p className="statbycountry">
+        <span>STATS BY COUNTRY</span>
+      </p>
       <div className="countries-container">
         {countryname.map((country) => (
           <CountryCase
